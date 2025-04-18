@@ -14,22 +14,3 @@ Route::get('/contact', [ContactController::class, 'show'])->name('contact');
 // Contact form submission route
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
-// Language switch route
-Route::get('/lang/{locale}', function ($locale) {
-    if (!in_array($locale, ['en', 'de'])) {
-        abort(400);
-    }
-
-    session(['locale' => $locale]); // Store the selected language in session
-    return redirect()->back(); // Redirect back to the previous page
-})->name('lang.switch');
-
-// Optional: Language switch links for the frontend
-Route::get('/switch-lang/{locale}', function ($locale) {
-    if (!in_array($locale, ['en', 'de'])) {
-        abort(400);
-    }
-
-    session(['locale' => $locale]); // Store the selected language in session
-    return redirect()->back(); // Redirect back to the previous page
-})->name('switch.lang');

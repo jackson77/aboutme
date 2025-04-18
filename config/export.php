@@ -4,7 +4,7 @@ return [
     /*
      * The base URL of the site, used to prefix links in the exported files.
      */
-    'base_url' => 'https://jackson77.github.io/aboutme',
+    'base_url' => 'https://jackson77.github.io/aboutme/dist/',
   
 
     /*
