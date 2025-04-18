@@ -1,6 +1,11 @@
 <?php
 
 return [
+    /*
+     * The base URL of the site, used to prefix links in the exported files.
+     */
+    'base_url' => 'https://jackson77.github.io/aboutme',
+  
 
     /*
      * If true, the exporter will crawl through your site's pages to determine
@@ -9,19 +14,12 @@ return [
     'crawl' => true,
 
     /*
-     * Add additional paths to be added to the export here. If you're using the
-     * `crawl` option, you probably don't need to add anything here.
-     *
-     * For example: "about", "posts/featured"
+     * Add additional paths to be added to the export here.
      */
     'paths' => [],
 
     /*
-     * Files and folders that should be included in the build. Expects
-     * key/value pairs with current paths as keys, and destination paths
-     * as values.
-     *
-     * By default your `public` folder's contents will be added to the export.
+     * Files and folders that should be included in the build.
      */
     'include_files' => [
         'public' => '',
@@ -40,33 +38,22 @@ return [
      * the export.
      */
     'clean_before_export' => true,
+    'disk' => null,
+    'before' => [],
+    'after' => [],
 
     /*
-     * If set, the site will be exported to this disk. Disks can be configured
-     * in `config/filesystems.php`.
-     *
-     * If empty, your site will be exported to a `dist` folder.
+     * If set, the site will be exported to this disk.
      */
     'disk' => null,
 
     /*
-     * Shell commands that should be run before the export starts when running
-     * `php artisan export`.
-     *
-     * You can skip these by adding a `--skip-{name}` flag to the command.
+     * Shell commands to run before the export.
      */
-    'before' => [
-        // 'assets' => '/usr/local/bin/yarn production',
-    ],
+    'before' => [],
 
     /*
-     * Shell commands that should be run after the export has finished when
-     * running `php artisan export`.
-     *
-     * You can skip these by adding a `--skip-{name}` flag to the command.
+     * Shell commands to run after the export.
      */
-    'after' => [
-        // 'deploy' => '/usr/local/bin/netlify deploy --prod',
-    ],
-
+    'after' => [],
 ];
