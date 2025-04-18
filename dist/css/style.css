@@ -1,0 +1,243 @@
+/* Reset / Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.display-4 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1a1a1a !important;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    color: #ccc !important;
+    transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #fff !important;
+}
+
+/* Form Styles */
+.form-control {
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+    }
+    
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .btn-lg {
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+}
+
+/* Accessibility */
+:focus-visible {
+    outline: 3px solid #0d6efd;
+    outline-offset: 2px;
+}
+
+/* Animations */
+.shadow {
+    transition: box-shadow 0.3s ease;
+}
+
+.shadow:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Portfolio Specific Styles */
+.fixed-top.scrolled {
+    background-color: rgba(26, 26, 26, 0.95) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.badge {
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.badge:hover {
+    transform: scale(1.05);
+}
+
+.bg-primary {
+    background-color: #0d6efd !important;
+}
+
+.btn-light {
+    background-color: #fff;
+    color: #0d6efd;
+    transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: #f8f9fa;
+    color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Section Spacing */
+section {
+    padding: 5rem 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    .card-body {
+        padding: 1.25rem;
+    }
+}
+/* About Page Specific Styles */
+.profile-img {
+    max-width: 250px;
+    border: 5px solid #fff;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.list-group-item {
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+.hover-scale {
+    transition: transform 0.2s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.1);
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+/* Typography */
+h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-img {
+        max-width: 200px;
+        margin-bottom: 2rem;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-img {
+        max-width: 150px;
+    }
+    
+    .badge {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
