@@ -4,11 +4,17 @@
     <div class="container py-5">
         <!-- Header Section -->
         <div class="text-center mb-5">
+           
             <h1 class="display-4 fw-bold mb-4">Hi, I'm Jackson Awe</h1>
             <p class="lead text-muted">
                 An experienced IT professional specializing in software development, cloud infrastructure, and cybersecurity.
             </p>
         </div>
+
+         <div class="col-md-12 text-center">
+                <img src="{{ asset('images/P size.jpg') }}" alt="Profile Photo" 
+                     class="img-fluid rounded-circle mb-3 shadow-sm" style="max-width: 200px;">
+            </div>
 
         <!-- What I Do Section -->
         <section class="mt-5">

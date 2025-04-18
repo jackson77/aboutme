@@ -4,7 +4,8 @@
     <div class="container py-5">
         <!-- About Me Section -->
         <section class="mb-5">
-            <h2 class="fw-semibold mb-4 text-center">About Me</h2>
+            <h2 class="fw-semibold mb-4 text-center">{{ __('messages.about_me') }}</h2>
+            <p class="lead text-center text-muted mb-4">{{ __('messages.about_me_description') }}</p>
             <div class="row g-4 mt-4 align-items-center">
                 <div class="col-md-4 text-center">
                     <img src="{{ asset('images/P size.jpg') }}" alt="Profile Photo" 
@@ -14,7 +15,7 @@
                     <p class="lead">Hello! I’m <strong>Jackson Awe</strong>, an IT expert with over <strong>5 years of experience</strong> in full-stack development, system design, cloud engineering, and network security.</p>
                     <p class="text-muted">I help businesses build secure, scalable, and efficient digital solutions, leveraging my skills in software development, Linux administration, and enterprise firewall management (Cisco, Sophos). I’ve worked with startups and enterprises in Insurancetech and Healthtech, delivering robust systems and optimizing IT infrastructure.</p>
                     <p class="text-muted">I’m passionate about clean code, system performance, and staying ahead of the curve in technology innovation.</p>
-                    <a href="https://www.firstassurance.co.tz" target="_blank" class="btn btn-primary mt-3">View My Projects</a>
+                    <a href="https://firstassurance.co.tz" target="_blank" class="btn btn-primary mt-3">View My Projects</a>
                 </div>
             </div>
         </section>

@@ -4,51 +4,32 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ContactController;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+// Main routes
+Route::get('/', [PortfolioController::class, 'home'])->name('home');
+Route::get('/about', [PortfolioController::class, 'about'])->name('about');
+Route::get('/services', [PortfolioController::class, 'services'])->name('services');
+Route::get('/projects', [PortfolioController::class, 'projects'])->name('projects');
+Route::get('/contact', [ContactController::class, 'show'])->name('contact');
 
-
-
-Route::get('/', [PortfolioController::class, 'home']);
-Route::get('/about', [PortfolioController::class, 'about']);
-Route::get('/services', [PortfolioController::class, 'services']);
-Route::get('/projects', [PortfolioController::class, 'projects']);
-Route::get('/contact', [PortfolioController::class, 'contact']);
-
-
-Route::get('/contact', [ContactController::class, 'show']);
+// Contact form submission route
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
-// Route::get('/check-lang', function () {
-//     return session('locale');
-// });
 
+// Language switch route
 Route::get('/lang/{locale}', function ($locale) {
-    if (! in_array($locale, ['en', 'de'])) {
+    if (!in_array($locale, ['en', 'de'])) {
         abort(400);
     }
 
-    session(['locale' => $locale]);
-    return redirect()->back();
+    session(['locale' => $locale]); // Store the selected language in session
+    return redirect()->back(); // Redirect back to the previous page
 })->name('lang.switch');
 
+// Optional: Language switch links for the frontend
+Route::get('/switch-lang/{locale}', function ($locale) {
+    if (!in_array($locale, ['en', 'de'])) {
+        abort(400);
+    }
 
-// Route::get('/', function () {
-//     return view('home');
-// });
-
-// Route::get('/about', function () {
-//     return view('about');
-// });
-
-// Route::get('/services', function () {
-//     return view('services');
-// });
-
-// Route::get('/projects', function () {
-//     return view('projects');
-// });
-
-// Route::get('/contact', function () {
-//     return view('contact');
-// });
+    session(['locale' => $locale]); // Store the selected language in session
+    return redirect()->back(); // Redirect back to the previous page
+})->name('switch.lang');
