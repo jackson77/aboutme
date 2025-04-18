@@ -5,7 +5,7 @@
         <!-- About Me Section -->
         <section class="mb-5">
             <h2 class="fw-semibold mb-4 text-center">{{ __('messages.about_me') }}</h2>
-            <p class="lead text-center text-muted mb-4">{{ __('messages.about_me_description') }}</p>
+            <p class="lead text-center text-muted mb-4"></p>
             <div class="row g-4 mt-4 align-items-center">
                 <div class="col-md-4 text-center">
                     <img src="{{ asset('images/P size.jpg') }}" alt="Profile Photo" 
