@@ -2,7 +2,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "remix vite:build",
+        "build": "php artisan export",
         "dev": "remix dev"
     },
     "devDependencies": {
