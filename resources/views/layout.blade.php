@@ -38,10 +38,7 @@
                 <a href="https://www.instagram.com/www.instagram.com/33icebittz" class="text-white me-3" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
                 <a href="https://www.linkedin.com/www.linkedin.com/in/jackson-awe-158528128" class="text-white me-3" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
             </div>
-            <!-- <div class="ms-3">
-                <a href="{{ route('lang.switch', 'en') }}" class="nav-link d-inline text-white {{ App::getLocale() === 'en' ? 'fw-bold' : '' }}">EN</a> |
-                <a href="{{ route('lang.switch', 'de') }}" class="nav-link d-inline text-white {{ App::getLocale() === 'de' ? 'fw-bold' : '' }}">DE</a>
-            </div> -->
+           
         </div>
     </div>
 </nav>
